@@ -72,14 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chainsnatching.wsgi.application'
 
-STATIC_URL = 'backend/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'backend/static/backend'),
-    os.path.join(BASE_DIR),
-]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Database
