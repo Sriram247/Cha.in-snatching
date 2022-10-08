@@ -6,11 +6,10 @@
   <title>Simple Login Form Example</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
   <link rel="stylesheet" href="{% static 'backend/css/style.css'%}">
-
 </head>
 <body>
 <div class="login-form">
-  <form>
+  <form action="{% url 'index' %}" method="POST">{% csrf_token %}
     <h1>Login</h1>
     <div class="content">
       <div class="input-field">
@@ -23,7 +22,7 @@
     </div>
     <div class="action">
       <button>Register</button>
-      <button>Sign in</button>
+      <button type="submit">Sign in</button>
     </div>
   </form>
 </div>

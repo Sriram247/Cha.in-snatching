@@ -72,6 +72,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chainsnatching.wsgi.application'
 
+MEDIA_URL = 'VideoUploads/'
+
+MEDIAFILES_DIRS = [
+    os.path.join(BASE_DIR, 'VideoUploads/')
+]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'VideoUploads')
 
 
 
