@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save
 import cv2,os
-import zipfile,threading   
+import zipfile   
 
 # Create your models here.
 
