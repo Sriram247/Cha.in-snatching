@@ -3,7 +3,7 @@ from .models import Video
 # Create your views here.
 
 def index(request):
-   return render(request,'backend/index.html')
+   return render(request,'index.html')
 def videoupload(request):
    return render(request,'backend/videoupload.html')
 def videoprocess(request):
