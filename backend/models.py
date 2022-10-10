@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save
 import cv2,os
-import zipfile   
+import zipfile,threading   
 
 # Create your models here.
 
@@ -10,7 +10,6 @@ class Video(models.Model):
    Photos = models.FileField(upload_to="Photos",blank=True,max_length=None)
 
 
-#trigger to send email for HOF approved and rejected
 def Video_recieved(instance, created, **kwargs):
    if created==True:
       vid = instance.video.url
@@ -28,4 +27,4 @@ def Video_recieved(instance, created, **kwargs):
          count += 1   
 
       
-post_save.connect(Video_recieved, sender=Video) 
+post_save.connect(Video_recieved, sender=Video)
